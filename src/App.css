@@ -51,7 +51,7 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(720deg) scale(100, 100);
+    transform: rotate(720deg) scale(200);
   }
 }
 
@@ -67,9 +67,9 @@ body {
   line-height: 78px;
   font-size: 25px;
   font-family: "Bebas Neue", sans-serif;
-  background: linear-gradient(72deg, transparent 5%, #686263 5%);
+  background: linear-gradient(72deg, transparent 5%, #ffffff 5%);
   border: 0;
-  color: #fff;
+  color: rgb(0, 0, 0);
   letter-spacing: 3px;
   box-shadow: 6px 0px 0px #9c1919;
   outline: transparent;
@@ -101,6 +101,7 @@ body {
     #000000 5%,
     #000000 5%
   );
+  color: #ffffff;
   text-shadow: -3px -3px 0px #ffffff, 3px 3px 0px #88130f;
   clip-path: var(--slice-0);
 }
