@@ -5,38 +5,25 @@ import LoginButton from "./component/LoginButton";
 import BackGround from "./Images/WhiteSCPLogo.png";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import StartPage from "./pages/StartPage";
+import IntroductionPage from "./pages/IntroductionPage";
 function App() {
-  const isClicked = useSelector((state) => state.button.value);
-
-  const Image = styled.img`
-    position: inherit;
-    height: 500px;
-    width: 500px;
-    animation: App-logo-spin infinite 20s linear;
-    align-items: center;
-  `;
-  const ClickedImage = styled.img`
-    position: inherit;
-    height: 500px;
-    width: 500px;
-    animation: Start-Entry 6s linear;
-    align-items: center;
-  `;
-
   return (
-    <div className="App">
-      {isClicked ? (
-        <ClickedImage src={BackGround} alt="" />
-      ) : (
-        <Image src={BackGround} alt="" />
-      )}
-
-      <h1>Hello loser</h1>
-      <LoginButton />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<StartPage />}></Route>
+        <Route path="/Intro" element={<IntroductionPage />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
+/* TODO 
+add catch all router page <= make it redirect to scp error page
+
+
+
+
+*/
 export default App;

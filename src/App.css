@@ -12,7 +12,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/* comment soemthin */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -60,6 +60,7 @@ body {
 }
 
 /* Start  of glitched button */
+/* I can re use the glitched affect for some other buttons later on */
 .glitched-affect,
 .glitched-affect:after {
   width: 150px;
@@ -67,11 +68,11 @@ body {
   line-height: 78px;
   font-size: 25px;
   font-family: "Bebas Neue", sans-serif;
-  background: linear-gradient(72deg, transparent 5%, #ffffff 5%);
+  background: linear-gradient(253deg, transparent 5%, #ffffff 5%);
   border: 0;
   color: rgb(0, 0, 0);
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #9c1919;
+  cursor: pointer;
   outline: transparent;
   position: relative;
   user-select: none;
@@ -95,7 +96,7 @@ body {
   right: 0;
   bottom: 0;
   background: linear-gradient(
-    45deg,
+    253deg,
     transparent 3%,
     #000000 3%,
     #000000 5%,
@@ -107,8 +108,45 @@ body {
 }
 
 .glitched-affect:hover:after {
-  animation: 2.2s glitch;
+  animation: 1.5s glitch infinite;
+
   animation-timing-function: steps(2, end);
+}
+@keyframes closeGraident {
+  0% {
+    background: linear-gradient(253deg, transparent 5%, #ffffff 5%);
+  }
+
+  10% {
+    background: linear-gradient(253deg, transparent 10%, #ffffff 5%);
+  }
+  20% {
+    background: linear-gradient(253deg, transparent 20%, #ffffff 5%);
+  }
+  30% {
+    background: linear-gradient(253deg, transparent 30%, #ffffff 5%);
+  }
+  40% {
+    background: linear-gradient(253deg, transparent 40%, #ffffff 5%);
+  }
+  50% {
+    background: linear-gradient(253deg, transparent 50%, #ffffff 5%);
+  }
+  60% {
+    background: linear-gradient(253deg, transparent 60%, #ffffff 5%);
+  }
+  70% {
+    background: linear-gradient(253deg, transparent 70%, #ffffff 5%);
+  }
+  80% {
+    background: linear-gradient(253deg, transparent 80%, #ffffff 5%);
+  }
+  90% {
+    background: linear-gradient(253deg, transparent 90%, #ffffff 5%);
+  }
+  100% {
+    background: linear-gradient(253deg, transparent 100%, #ffffff 5%);
+  }
 }
 
 @keyframes glitch {
