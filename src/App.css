@@ -34,6 +34,7 @@ body {
   background-size: 500px 500px;
   background-color: black;
 }
+
 #backgroundImg {
   align-items: center;
 }
@@ -52,6 +53,40 @@ body {
   }
   to {
     transform: rotate(720deg) scale(200);
+  }
+}
+#specialImgTagForNav {
+  display: block;
+  position: inherit;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  animation: Main-App-logo-spin infinite 20s linear;
+  opacity: 50%;
+}
+@keyframes backgroundImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Main-Start-Entry {
+  from {
+    transform: rotate(0deg) scale(200);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes Main-App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

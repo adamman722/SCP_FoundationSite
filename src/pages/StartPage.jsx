@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, useNavigate } from "react-router-dom";
 import IntroPage from "./IntroductionPage";
 function StartPage() {
   const isClicked = useSelector((state) => state.button.value);
+
   const Image = styled.img`
     position: inherit;
     height: 500px;
