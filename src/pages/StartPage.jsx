@@ -42,7 +42,9 @@ function StartPage() {
     touch-action: manipulation;
     animation: 0.85s closeGraident;
   `;
+
   let navigate = useNavigate();
+
   return (
     <div className="App">
       {isClicked ? (
@@ -60,7 +62,7 @@ function StartPage() {
       {isClicked
         ? setTimeout(() => {
             navigate("/Intro");
-          }, 4000)
+          }, 4500)
         : null}
     </div>
   );

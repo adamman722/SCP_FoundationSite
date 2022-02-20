@@ -1,9 +1,42 @@
-import React from "react";
+import { selectOptions } from "@testing-library/user-event/dist/select-options";
+import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
+import { BrowserRouter as Router, Route, useNavigate } from "react-router-dom";
 
 function IntroductionPage() {
+  const [isActive, setIsActive] = useState(false);
+  const [color, setColor] = useState({ color: "#39FF14" });
+  let navigate = useNavigate();
+
+  const secondIntro = (
+    <div className="typewriter2">
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+            .changeDelay(75)
+            .typeString("...We have been waiting for you")
+            .start()
+            .pauseFor(2000)
+            .deleteAll();
+        }}
+        className="typewriter2"
+      />
+    </div>
+  );
+
+  setTimeout(() => {
+    setIsActive(true);
+    console.log("active ");
+  }, 3500);
+
+  setTimeout(() => {
+    setColor({ color: "#000000" });
+  }, 13000);
+  setTimeout(() => {
+    navigate("/MainPage");
+  }, 14000);
   return (
-    <div style={{ color: "#39FF14" }} className="App">
+    <div style={color} className="App">
       <div className="typewriter1">
         <Typewriter
           className="nameeee"
@@ -18,25 +51,12 @@ function IntroductionPage() {
               .pauseFor(500)
               .typeString(".")
               .start()
-              .pauseFor(7000)
+              .pauseFor(7500)
               .deleteAll();
           }}
         />
       </div>
-      <div className="typewriter2">
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .changeDelay(75)
-              .pauseFor(3300)
-              .typeString("...We have been waiting for you")
-              .start()
-              .pauseFor(2000)
-              .deleteAll();
-          }}
-          className="typewriter2"
-        />
-      </div>
+      {isActive ? secondIntro : null}
     </div>
   );
 }

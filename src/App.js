@@ -8,12 +8,14 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StartPage from "./pages/StartPage";
 import IntroductionPage from "./pages/IntroductionPage";
+import MainPage from "./pages/IntroductionPage";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<StartPage />}></Route>
         <Route path="/Intro" element={<IntroductionPage />}></Route>
+        <Route path="/MainPage" element={<MainPage />} />
       </Routes>
     </Router>
   );
